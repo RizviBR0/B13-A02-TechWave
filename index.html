@@ -217,7 +217,7 @@
                 <!-- featured episodes cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 sm:grid-rows-1 gap-6 sm:gap-8">
                     <!-- card 1 -->
-                    <div>
+                    <div class="hover:scale-105 transition-transform cursor-pointer">
                         <iframe class="w-full rounded-t-3xl h-56 sm:h-[214px]"
                             src="https://www.youtube.com/embed/0-FUhQKe-eU?si=iymLQ5PS1CczyTwP?controls=0"
                             title="YouTube video player" frameborder="0"
@@ -240,7 +240,7 @@
                     </div>
 
                     <!-- card 2 -->
-                    <div>
+                    <div class="hover:scale-105 transition-transform cursor-pointer">
                         <iframe class="w-full rounded-t-3xl h-[214px]"
                             src="https://www.youtube.com/embed/PLBYYdg0sfs?si=W39LIcm2dwAw5hgG"
                             title="YouTube video player" frameborder="0"
@@ -261,7 +261,7 @@
                     </div>
 
                     <!-- card 3 -->
-                    <div>
+                    <div class="hover:scale-105 transition-transform cursor-pointer">
                         <iframe class="w-full rounded-t-3xl h-[214px]"
                             src="https://www.youtube.com/embed/Rt7qxyDzc_Y?si=mcsshXbYP5aHwmNO"
                             title="YouTube video player" frameborder="0"
@@ -288,11 +288,13 @@
             <div class="container mx-auto py-14 sm:py-28 px-5 sm:px-0">
                 <h2 class="font-bold text-3xl sm:text-5xl mb-6 sm:mb-10 text-center text-white">Meet the Host</h2>
 
+                <!-- host image -->
                 <div
                     class="bg-[#35116566] rounded-4xl sm:p-10 p-6 flex sm:flex-row flex-col justify-center items-center sm:gap-6 gap-4">
                     <img class="rounded-full w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]" src="./assets/host.png"
                         alt="">
 
+                    <!-- host content -->
                     <div
                         class="flex flex-col gap-4 text-white justify-center items-center sm:items-start text-center sm:text-left">
                         <h3 class="font-bold text-3xl">Alex Kumar</h3>
@@ -302,17 +304,18 @@
                             TechWave, Alex shares insights from industry leaders and practical advice for anyone looking
                             to grow in tech.</p>
 
+                        <!-- social icons container -->
                         <div class="flex items-center gap-2">
-                            <div class="border border-[#533C72] rounded-full p-2">
+                            <div class="border border-[#533C72] rounded-full p-2 cursor-pointer hover:bg-white/10">
                                 <img class="w-4 h-4" src="./assets/linkedin.svg" alt="">
                             </div>
-                            <div class="border border-[#533C72] rounded-full p-2">
+                            <div class="border border-[#533C72] rounded-full p-2 cursor-pointer hover:bg-white/10">
                                 <img class="w-4 h-4" src="./assets/x.svg" alt="">
                             </div>
-                            <div class="border border-[#533C72] rounded-full p-2">
+                            <div class="border border-[#533C72] rounded-full p-2 cursor-pointer hover:bg-white/10">
                                 <img class="w-4 h-4" src="./assets/instagram.svg" alt="">
                             </div>
-                            <div class="border border-[#533C72] rounded-full p-2">
+                            <div class="border border-[#533C72] rounded-full p-2 cursor-pointer hover:bg-white/10">
                                 <img class="w-4 h-4" src="./assets/youtube.svg" alt="">
                             </div>
                         </div>
@@ -321,6 +324,51 @@
             </div>
         </section>
     </main>
+
+    <footer class="py-10 sm:py-28 relative">
+        <!-- background footer-bg wave image -->
+        <img src="./assets/footer-bg.png" class="absolute inset-0 h-full w-full
+           object-cover
+           sm:object-[50%_37%] object-[50%_27%] z-0" />
+
+        <div
+            class="container mx-auto relative z-10 flex flex-col justify-center items-center gap-6 sm:gap-8 h-full px-5 sm:px-0">
+            <!-- techwave gradient logo -->
+            <div class="logo text-white font-extrabold text-[24px] sm:text-[40px] w-fit sm:w-56">
+                Tech<span
+                    class="bg-linear-[10deg] from-[#F7E93F] via-[#FB09B4] to-[#9100F8] text-transparent bg-clip-text">Wave</span>
+            </div>
+
+            <!-- links and copyright -->
+            <div class="flex gap-4 flex-col sm:gap-10 sm:flex-row text-white/60">
+                <div class="flex justify-center items-center gap-4 sm:gap-10">
+                    <div class="flex gap-2 justify-center items-center cursor-pointer hover:text-white/90">
+                        <img src="./assets/spotify.png" alt="">
+                        <p>Spotify</p>
+                    </div>
+
+                    <div class="flex gap-2 justify-center items-center cursor-pointer hover:text-white/90">
+                        <img src="./assets/apple-podcast.png" alt="">
+                        <p>Apple Podcasts</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center gap-4 sm:gap-10">
+                    <div class="flex gap-2 justify-center items-center cursor-pointer hover:text-white/90">
+                        <img src="./assets/youtube-podcast.png" alt="">
+                        <p>Youtube</p>
+                    </div>
+
+                    <div class="flex gap-2 justify-center items-center cursor-pointer hover:text-white/90">
+                        <img src="./assets/twitter.png" alt="">
+                        <p>Twitter</p>
+                    </div>
+                </div>
+            </div>
+
+            <small class="text-[#FAFAFA]/60">&copy; 2026 TechWave Podcast. All rights reserved.</small>
+        </div>
+    </footer>
 </body>
 
 </html>
