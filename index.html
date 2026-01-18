@@ -5,10 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechWave</title>
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <h1>Hello, World!</h1>
+<body class="font-inter bg-[#1A0B2E]">
+    <!-- navbar -->
+    <header class="bg-[#1A0B2E] border-b border-b-[#412567] px-4 sm:px-0 py-3">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- techwave gradient logo -->
+            <div class="logo text-white font-extrabold text-[24px] sm:text-[40px] w-fit sm:w-56">
+                Tech<span
+                    class="bg-linear-[10deg] from-[#F7E93F] via-[#FB09B4] to-[#9100F8] text-transparent bg-clip-text">Wave</span>
+            </div>
+
+            <!-- nav links for large devices -->
+            <ul class="hidden sm:flex gap-8 text-white/90">
+                <li><a class="text-base font-medium leading-[120%] hover:text-white/60" href="#">About</a></li>
+                <li><a class="text-base font-medium leading-[120%] hover:text-white/60" href="#">Episodes</a></li>
+                <li><a class="text-base font-medium leading-[120%] hover:text-white/60" href="#">Host</a></li>
+            </ul>
+
+            <div class="flex justify-end items-center w-fit sm:w-56">
+                <!-- subscribe button for large devices -->
+                <button
+                    class="hidden sm:flex justify-center items-center gap-1 text-white font-semibold text-base bg-linear-[10deg] from-[#F7E93F] via-[#FB09B4] to-[#9100F8] px-4 py-3 rounded-full cursor-pointer hover:scale-105 transition-transform">Subscribe<svg
+                        class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                        <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                        </path>
+                    </svg></button>
+
+                <!-- hamburger menu for mobile devices -->
+                <img class="block sm:hidden cursor-pointer" src="./assets/hamburger-menu.png" alt="">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- hero section -->
+        <section id="hero" class="py-10 h-[460px] sm:h-[760px] relative">
+            <!-- background hero-bg wave image -->
+            <img src="assets/hero-bg.png" class="pointer-events-none absolute inset-0 h-full w-full
+           object-contain sm:object-cover
+           object-[50%_37%] z-0" />
+
+            <div class="container mx-auto flex justify-center items-center h-full relative z-10 px-5 py-10">
+                <div class="text-center text-white">
+                    <!-- top circle image and badge -->
+                    <div
+                        class="flex justify-center items-center flex-col mb-6 bg-[url('./assets/hero-circle.png')] bg-no-repeat bg-contain w-56 h-56 sm:w-96 sm:h-96 mx-auto gap-4 relative">
+                        <!-- badge -->
+                        <div
+                            class="text-[#1A0B2E] font-semibold text-lg absolute top-[5%] left-[96%] translate-x-[-96%] bg-[#00FF88] rounded-full py-1 px-4 shadow-lg shadow-[#00FF88]/50">
+                            NEW</div>
+
+                        <!-- mic icon -->
+                        <img class="sm:w-28 w-12" src="./assets/microphone.png" alt="">
+                    </div>
+
+                    <div>
+                        <div class="mb-6">
+                            <h1 class="font-extrabold sm:text-6xl text-4xl mb-2">TechWave</h1>
+                            <p class="text-white/80 text-base">Your daily dose of tech insights, productivity hacks, and
+                                personal growth</p>
+                        </div>
+
+                        <div class="flex justify-center items-center gap-2 sm:gap-4">
+                            <!-- listen on spotify button -->
+                            <button
+                                class="flex justify-center items-center text-white font-semibold text-base bg-linear-[10deg] from-[#F7E93F] via-[#FB09B4] to-[#9100F8] px-5 py-3 rounded-full cursor-pointer hover:scale-105 transition-transform gap-1">
+                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22"
+                                    fill="rgba(255,255,255,1)">
+                                    <path
+                                        d="M12.001 2C17.551 2 22.001 6.5 22.001 12C22.001 17.5 17.501 22 12.001 22C6.50098 22 2.00098 17.5 2.00098 12C2.00098 6.5 6.50098 2 12.001 2ZM12.001 4C7.60555 4 4.00098 7.60457 4.00098 12C4.00098 16.3954 7.60555 20 12.001 20C16.3964 20 20.001 16.3954 20.001 12C20.001 7.58572 16.4276 4 12.001 4ZM15.751 16.65C13.401 15.2 10.451 14.8992 6.95014 15.6992C6.60181 15.8008 6.30098 15.55 6.20098 15.25C6.10098 14.8992 6.35098 14.6 6.65098 14.5C10.451 13.6492 13.751 14 16.351 15.6C16.701 15.75 16.7501 16.1492 16.6018 16.45C16.4018 16.7492 16.0518 16.85 15.751 16.65ZM16.7501 13.95C14.051 12.3 9.95098 11.8 6.80098 12.8C6.40181 12.9 5.95098 12.7 5.85098 12.3C5.75098 11.9 5.95098 11.4492 6.35098 11.3492C10.001 10.25 14.501 10.8008 17.601 12.7C17.9018 12.8508 18.051 13.35 17.8018 13.7C17.551 14.05 17.101 14.2 16.7501 13.95ZM6.30098 9.75083C5.80098 9.9 5.30098 9.6 5.15098 9.15C5.00098 8.64917 5.30098 8.15 5.75098 7.99917C9.30098 6.94917 15.151 7.14917 18.8518 9.35C19.301 9.6 19.451 10.2 19.201 10.65C18.9518 11.0008 18.351 11.1492 17.9018 10.9C14.701 9 9.35098 8.8 6.30098 9.75083Z">
+                                    </path>
+                                </svg>Listen
+                                On Spotify</button>
+
+                            <!-- subscribe button -->
+                            <button
+                                class="flex justify-center items-center gap-1 px-5 py-3 border border-[#00FF88] text-[#00FF88] font-semibold text-base rounded-full cursor-pointer hover:scale-105 transition-transform"><svg
+                                    class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22"
+                                    fill="#00FF88">
+                                    <path
+                                        d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z">
+                                    </path>
+                                </svg>Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about the podcast section -->
+        <section id="about-podcast"></section>
+    </main>
 </body>
 
 </html>
