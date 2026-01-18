@@ -8,6 +8,7 @@
 
     <!-- tailwind cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./tailwind.css">
 </head>
 
 <body class="font-inter bg-[#1A0B2E]">
@@ -31,7 +32,8 @@
                 <!-- subscribe button for large devices -->
                 <button
                     class="hidden sm:flex justify-center items-center gap-1 text-white font-semibold text-base bg-linear-[10deg] from-[#F7E93F] via-[#FB09B4] to-[#9100F8] px-4 py-3 rounded-full cursor-pointer hover:scale-105 transition-transform">Subscribe<svg
-                        class="w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                        class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="rgba(255,255,255,1)">
                         <path
                             d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
                         </path>
@@ -45,17 +47,17 @@
 
     <main>
         <!-- hero section -->
-        <section id="hero" class="py-10 h-[460px] sm:h-[760px] relative">
+        <section id="hero" class="py-10 h-[480px] sm:h-[760px] relative">
             <!-- background hero-bg wave image -->
-            <img src="assets/hero-bg.png" class="pointer-events-none absolute inset-0 h-full w-full
+            <img src="assets/hero-bg.png" class="absolute inset-0 h-full w-full
            object-contain sm:object-cover
-           object-[50%_37%] z-0" />
+           sm:object-[50%_37%] object-[50%_27%] z-0" />
 
             <div class="container mx-auto flex justify-center items-center h-full relative z-10 px-5 py-10">
                 <div class="text-center text-white">
                     <!-- top circle image and badge -->
                     <div
-                        class="flex justify-center items-center flex-col mb-6 bg-[url('./assets/hero-circle.png')] bg-no-repeat bg-contain w-56 h-56 sm:w-96 sm:h-96 mx-auto gap-4 relative">
+                        class="flex justify-center items-center flex-col mb-6 sm:mb-10 bg-[url('./assets/hero-circle.png')] bg-no-repeat bg-contain w-56 h-56 sm:w-96 sm:h-96 mx-auto gap-4 relative">
                         <!-- badge -->
                         <div
                             class="text-[#1A0B2E] font-semibold text-lg absolute top-[5%] left-[96%] translate-x-[-96%] bg-[#00FF88] rounded-full py-1 px-4 shadow-lg shadow-[#00FF88]/50">
@@ -100,7 +102,53 @@
         </section>
 
         <!-- about the podcast section -->
-        <section id="about-podcast"></section>
+        <section id="about-podcast" class="bg-[#1A0B2E]">
+            <div class="container mx-auto py-10 sm:pt-12 sm:pb-28 sm:py-12 px-5 sm:px-0">
+                <!-- about podcast section heading content -->
+                <div class="text-center text-white mb-10 sm:mb-20">
+                    <h2 class="font-bold text-3xl sm:text-5xl mb-4">About the Podcast</h2>
+                    <p class="max-w-2xl mx-auto text-white/80">TechWave is your go-to podcast for staying ahead in the
+                        fast-paced world of technology.
+                        We break down complex topics into digestible insights, explore productivity strategies that
+                        actually work,
+                        and share stories of personal growth from industry leaders.
+                        <br><br>
+                        Join thousands of young professionals and tech enthusiasts who start their day with TechWave.
+                    </p>
+                </div>
+
+                <!-- divider -->
+                <hr class="border-white/10 border-t w-full mb-10 sm:mb-20">
+
+                <!-- podcast section overview -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0">
+                    <div class="text-center">
+                        <h2 class="text-[#00FF88] font-black text-4xl sm:text-5xl mb-4">150K+</h2>
+                        <p class="text-white/80 text-base uppercase">Monthly Listeners</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h2 class="text-[#00FF88] font-black text-4xl sm:text-5xl mb-4">200+</h2>
+                        <p class="text-white/80 text-base uppercase">Episodes Published</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h2 class="text-[#00FF88] font-black text-4xl sm:text-5xl mb-4">4.9★</h2>
+                        <p class="text-white/80 text-base uppercase">Average Rating</p>
+                    </div>
+
+                    <div class="text-center">
+                        <h2 class="text-[#00FF88] font-black text-4xl sm:text-5xl mb-4">50+</h2>
+                        <p class="text-white/80 text-base uppercase">Industry Experts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose TechWave section -->
+        <section id="why-techwave">
+            <div class="container mx-auto"></div>
+        </section>
     </main>
 </body>
 
